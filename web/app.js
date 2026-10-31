@@ -120,9 +120,10 @@ function renderSetup() {
     el('saved-redirect').textContent = SETUP.redirect_uri;
     if (SETUP.verified && !el('test-result').textContent) showTest({ result: SETUP.verified, message: SETUP.verified === 'valid' ? 'Last test: Oura accepted these keys.' : SETUP.verified === 'invalid' ? 'Last test: Oura did not accept these keys. Replace them.' : 'Last test could not confirm the keys.' });
   }
-  for (const li of document.querySelectorAll('.hl-step')) li.classList.toggle('done', saved && +li.dataset.step < 5);
+  for (const li of document.querySelectorAll('.hl-step')) li.classList.toggle('done', saved && (+li.dataset.step < 4 || (+li.dataset.step === 4 && SETUP.verified !== 'invalid')));
   const local = isLocal(SETUP.redirect_uri || chosenRedirect);
   el('connect-step-3').hidden = !local;
+  el('f-paste').placeholder = (SETUP.redirect_uri || chosenRedirect) + '?code=\u2026';
   el('paste-label').firstChild.textContent = local ? 'Address from the browser bar' : 'Didn\u2019t come back to an \u201cOura connected\u201d page? Paste the address the browser ended on';
 }
 function showTest(r) {
@@ -293,7 +294,7 @@ function poll(ms, times) {
 if (!window.WizardApp || WizardApp.version !== 1) {
   say('Wizard system functions are unavailable. Open Oura through Wizard.', 'error');
 } else {
-  WizardApp.ready({ name: 'wizard-oura', version: '0.1.0' });
+  WizardApp.ready({ name: 'wizard-oura', version: '0.1.1' });
   WizardApp.back.register({ canGoBack: () => false, back: () => false });
 }
 refresh().then(() => poll(S && S.status === 'syncing' ? 3000 : 60000, S && S.status === 'syncing' ? 1200 : 1e9));

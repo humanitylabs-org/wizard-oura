@@ -1,7 +1,7 @@
 ---
 name: wizard-oura
 description: Use when the owner asks about his Oura connection, Oura setup or sync. Health questions go to Health.
-version: 0.1.0
+version: 0.1.1
 author: Humanity Labs
 license: GPL-3.0-only
 metadata:

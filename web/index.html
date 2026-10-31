@@ -7,6 +7,7 @@
   <title>Oura</title>
   <script src="boot.js"></script>
   <link rel="stylesheet" href="wizard-tokens.css">
+  <link rel="stylesheet" href="/wizard-os-home/kit/wizard-tokens.css">
   <link rel="stylesheet" href="wizard-ui.css">
   <link rel="stylesheet" href="standalone.css">
   <link rel="stylesheet" href="styles.css">
@@ -77,15 +78,15 @@
             <div class="hl-step-b">
               <p>Tap <b>Create New</b> (or New Application) and fill it in with these values. Each has a Copy button.</p>
               <div class="hl-field"><span>Display name</span><div class="hl-copy"><input id="v-name" readonly aria-label="Display name"><button type="button" class="hl-cbtn" data-copy="v-name">Copy</button></div></div>
-              <div class="hl-field"><span>Description</span><div class="hl-copy"><textarea id="v-desc" rows="2" readonly aria-label="Description"></textarea><button type="button" class="hl-cbtn" data-copy="v-desc">Copy</button></div></div>
+              <div class="hl-field"><span>Description</span><div class="hl-copy"><textarea id="v-desc" rows="3" readonly aria-label="Description"></textarea><button type="button" class="hl-cbtn" data-copy="v-desc">Copy</button></div></div>
               <div class="hl-field"><span>Contact email</span><p class="hl-plain">Your own email address.</p></div>
               <div class="hl-field"><span>Website, Privacy policy and Terms of service</span>
-                <div class="hl-copy"><input id="v-info" readonly aria-label="Website, privacy policy and terms address"><button type="button" class="hl-cbtn" data-copy="v-info">Copy</button></div>
+                <div class="hl-copy"><textarea id="v-info" rows="2" readonly spellcheck="false" aria-label="Website, privacy policy and terms address"></textarea><button type="button" class="hl-cbtn" data-copy="v-info">Copy</button></div>
                 <small class="hl-hint">Paste the same address in all three. It is this app's public page, which explains that your data stays on your own box.</small>
               </div>
               <div class="hl-field">
                 <span>Redirect URI</span>
-                <div class="hl-copy"><textarea id="v-redirect" rows="2" readonly spellcheck="false" aria-label="Redirect URI"></textarea><button type="button" class="hl-cbtn" data-copy="v-redirect">Copy</button></div>
+                <div class="hl-copy"><textarea id="v-redirect" rows="3" readonly spellcheck="false" aria-label="Redirect URI"></textarea><button type="button" class="hl-cbtn" data-copy="v-redirect">Copy</button></div>
                 <small id="redir-note" class="hl-hint"></small>
                 <button type="button" class="hl-link" id="redir-other" hidden></button>
               </div>

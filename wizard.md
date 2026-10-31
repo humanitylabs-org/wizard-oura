@@ -4,7 +4,7 @@ id: wizard-oura
 name: Oura
 type: external
 category: system
-version: 0.1.0
+version: 0.1.1
 summary: Connect your Oura Ring with your own free Oura developer app. Health gets read-only readiness, sleep, activity and workouts.
 tags: [data]
 license: GPL-3.0-only

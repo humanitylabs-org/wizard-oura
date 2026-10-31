@@ -36,7 +36,7 @@ from urllib.parse import parse_qs, urlencode, urlsplit
 ROOT = Path(__file__).resolve().parent.parent if '__file__' in globals() else Path(os.environ.get('APP_ROOT', '.')).resolve()
 DATA = Path(os.environ.get('DATA_DIR', ROOT / '.data'))
 APP_ID = 'wizard-oura'
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 PREFIX = '/' + APP_ID
 PORT = os.environ.get('PORT', '8828')
 AUTH_URL = os.environ.get('OURA_AUTH_URL', 'https://cloud.ouraring.com/oauth/authorize')
@@ -53,7 +53,7 @@ SIGNUP_URL = os.environ.get('OURA_SIGNUP_URL', 'https://ouraring.com/membership'
 INFO_URL = os.environ.get('OURA_INFO_URL', 'https://github.com/oscarhenrycollins/wizard-oura')   # website/privacy/terms for the owner's own Oura application
 DEFAULT_REDIRECT = 'http://localhost:3000/callback'
 SUGGESTED_APP_NAME = 'Wizard Health'   # the Oura application's display name; any name works
-SUGGESTED_DESCRIPTION = 'Private connection from my own Wizard box to my Oura data. Read-only, for my own use.'
+SUGGESTED_DESCRIPTION = 'Private, read-only link from my own Wizard box to my Oura data.'
 SCOPES = ['email', 'daily', 'workout', 'spo2']
 SYNC_MINUTES = float(os.environ.get('OURA_SYNC_MINUTES', '20'))
 STATE_TTL = float(os.environ.get('OURA_STATE_TTL', str(2 * 3600)))   # a sign-in started here stays valid for two hours

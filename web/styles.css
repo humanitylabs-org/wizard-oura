@@ -55,7 +55,7 @@ a.wz-button { display: inline-flex; align-items: center; text-decoration: none; 
 .hl-result { margin: 4px 0 0; font-weight: 650; }
 .hl-result:empty { display: none; }
 .hl-result[data-kind="valid"] { color: var(--good); }
-.hl-result[data-kind="invalid"] { color: var(--bad); }
+.hl-result[data-kind="invalid"] { color: color-mix(in oklch, var(--wz-danger, var(--bad)) 72%, var(--wz-warning-light, var(--wz-warning, var(--bad)))); }
 .hl-result[data-kind="unknown"] { color: var(--mid); }
 @container wz-app (max-width: 480px) { .hl-step-b { padding-left: 14px; } }
 
