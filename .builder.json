@@ -1,0 +1,6 @@
+{
+  "request": "Oura connector: guided in-app setup with the owner's own Oura developer application, OAuth (box callback or paste-back), synced copy offered through the health-data contract",
+  "template": "hello-wizard",
+  "state": "public_repo",
+  "name": "Oura"
+}

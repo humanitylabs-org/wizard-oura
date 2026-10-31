@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#232b4d"/><stop offset="1" stop-color="#0d1020"/></linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9aa2b8"/><stop offset=".45" stop-color="#eef1f7"/><stop offset="1" stop-color="#8790a8"/></linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5d6580"/><stop offset="1" stop-color="#9ba3ba"/></linearGradient>
+    <linearGradient id="moon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cdbfff"/><stop offset="1" stop-color="#8f7cf0"/></linearGradient>
+    <mask id="h"><rect width="1024" height="1024" fill="#fff"/><ellipse cx="492" cy="584" rx="300" ry="140" fill="#000"/></mask>
+    <mask id="c"><rect width="1024" height="1024" fill="#fff"/><circle cx="852" cy="244" r="88" fill="#000"/></mask>
+  </defs>
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+  <path mask="url(#h)" fill="url(#ring)" d="M72 584a420 216 0 0 1 840 0v104a420 216 0 0 1-840 0Z"/>
+  <path fill="url(#wall)" d="M192 584a300 140 0 0 1 600 0a300 76 0 0 0-600 0Z"/>
+  <circle mask="url(#c)" fill="url(#moon)" cx="800" cy="280" r="104"/>
+</svg>
